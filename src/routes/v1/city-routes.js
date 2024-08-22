@@ -9,5 +9,7 @@ router
     CityMiddlewares.validateCityName,
     CityController.createCity);
 
+router.put("/:id", CityController.updateCity);
+router.delete("/:id", CityController.destroyCity)
 
 module.exports = router;
