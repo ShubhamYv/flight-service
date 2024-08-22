@@ -36,10 +36,13 @@ class CrudRepository {
   }
 
   async update(id, data) {
-    const response = await this.model.update(data, {
+    const [affectedRows] = await this.model.update(data, {
       where: { id: id }
     });
-    return response;
+    if (affectedRows === 0) {
+      throw new AppError("Not able to find the resource", StatusCodes.NOT_FOUND);
+    }
+    return affectedRows;
   }
 }
 
