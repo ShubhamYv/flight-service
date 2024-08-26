@@ -9,5 +9,7 @@ router
     FlightMiddlewares.validateFlightTimes,
     FlightController.createFlight);
 
+router.get("/:id", FlightController.getFlight);
+router.get("/", FlightController.getFlights);
 
 module.exports = router;
