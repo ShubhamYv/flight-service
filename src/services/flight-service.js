@@ -20,7 +20,6 @@ async function createFlight(data) {
   }
 }
 
-
 module.exports = {
   createFlight,
 }

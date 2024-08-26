@@ -16,7 +16,7 @@ async function createAirplane(req, res) {
 
   } catch (error) {
     ErrorResponse.error = error;
-    res
+    return res
       .status(error.statusCode)
       .json(ErrorResponse)
   }
@@ -31,7 +31,7 @@ async function getAirplanes(req, res) {
       .json(SuccessResponse);
   } catch (error) {
     ErrorResponse.error = error;
-    res
+    return res
       .status(error.statusCode)
       .json(ErrorResponse);
   }
@@ -46,7 +46,7 @@ async function getAirplane(req, res) {
       .json(SuccessResponse);
   } catch (error) {
     ErrorResponse.error = error;
-    res
+    return res
       .status(error.statusCode)
       .json(ErrorResponse);
   }
@@ -61,7 +61,7 @@ async function destroyAirplane(req, res) {
       .json(SuccessResponse);
   } catch (error) {
     ErrorResponse.error = error;
-    res
+    return res
       .status(error.statusCode)
       .json(ErrorResponse);
   }
@@ -79,7 +79,7 @@ async function updateAirplane(req, res) {
       .json(SuccessResponse);
   } catch (error) {
     ErrorResponse.error = error;
-    res
+    return res
       .status(error.statusCode)
       .json(ErrorResponse);
   }
