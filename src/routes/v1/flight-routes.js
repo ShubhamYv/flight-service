@@ -10,6 +10,6 @@ router
     FlightController.createFlight);
 
 router.get("/:id", FlightController.getFlight);
-router.get("/", FlightController.getFlights);
+router.get("/", FlightController.getAllFlights);
 
 module.exports = router;
