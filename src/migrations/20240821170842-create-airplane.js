@@ -4,28 +4,28 @@ module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Airplanes', {
       id: {
-        allowNull: false, // DB level constraints
-        autoIncrement: true, // DB level constraints
-        primaryKey: true, // DB level constraints
+        allowNull: false,
+        autoIncrement: true,
+        primaryKey: true,
         type: Sequelize.INTEGER
       },
       modelNumber: {
         type: Sequelize.STRING,
-        allowNull: false // DB level constraints
+        allowNull: false,
       },
       capacity: {
         type: Sequelize.INTEGER,
-        defaultValue: 0, // DB level constraints
+        defaultValue: 0,
         validate: {
-          max: 1000,
+          max: 1000
         }
       },
       createdAt: {
-        allowNull: false, // DB level constraints
+        allowNull: false,
         type: Sequelize.DATE
       },
       updatedAt: {
-        allowNull: false, // DB level constraints
+        allowNull: false,
         type: Sequelize.DATE
       }
     });

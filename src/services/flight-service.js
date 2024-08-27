@@ -52,7 +52,7 @@ async function getAllFlights(query) {
   if (query.price) {
     [minPrice, maxPrice] = query.price.split("-");
     customFilter.price = {
-      [Op.between]: [minPrice, (maxPrice == undefined) ? (minPrice + 20000) : maxPrice]
+      [Op.between]: [minPrice, (maxPrice == undefined) ? 20000 : maxPrice]
     };
   }
 
@@ -78,6 +78,7 @@ async function getAllFlights(query) {
     const flights = await flightRepository.getAllFlights(customFilter, sortFilter);
     return flights;
   } catch (error) {
+    console.log("Error:::", error.message)
     throw new AppError('Cannot fetch the data of all the flights', StatusCodes.INTERNAL_SERVER_ERROR);
   }
 }
