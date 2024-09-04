@@ -94,15 +94,15 @@ Explore the Skybook Flight Ecosystem:
 1. **Flight Services**: Manages airplanes, airports, cities, and flights.
    - [Flight Services Repository](https://github.com/ShubhamYv/flight-service)
 
-2. **Flight Booking Service**: Handles flight bookings and seat management.
+2. **Flight Booking Service**: Handles flight bookings, cancellations, and payments.
    - [Flight Booking Service Repository](https://github.com/ShubhamYv/flight-booking-service)
 
-3. **Flight API Gateway**: Routes requests and balances load across services.
+3. **Flight API Gateway**: Secures user authentication, implements rate limiting, and routes requests.
    - [Flight API Gateway Repository](https://github.com/ShubhamYv/flight-api-gateway)
 
-4. **Flight Notification Service**: Sends real-time flight updates and notifications.
+4. **Flight Notification Service**: Manages ticket creation and sends email notifications via RabbitMQ.
    - [Flight Notification Service Repository](https://github.com/ShubhamYv/flight-notification-service)
 
-Dive into these services to see how they collaborate for a seamless flight booking experience!
+Dive into these services to see how they work together to provide a seamless flight booking experience!
 
 ---
